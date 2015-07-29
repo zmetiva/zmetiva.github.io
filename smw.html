@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+<head>
+    <title>zmmetiva</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/socialmediawidget.js"></script>
+
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">zmetiva</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/zmetiva" target="_blank">GitHub Page</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    <div class="container-fluid" style="padding-top: 60px; padding-bottom: 10px; border-bottom: 2px solid black; background-repeat: repeat;  background-image: url('bg.png');">
+        <div class="pull-left">
+            <img class="img-rounded" style="height: 100px;" src="https://avatars1.githubusercontent.com/u/8875857?v=3&s=460">
+        </div>
+        <div style="padding-left: 120px;">
+            <h2>zmetiva</h2>
+            <p>
+                <strong>GitHub Website</strong>
+            </p>
+        </div>
+    </div>
+    <div class="row-fluid" style="padding-top: 10px;">
+        <div class="col-md-2 text-center">
+            <img class="img-rounded" style="width: 100%; padding-bottom: 3px;" src="imgs/smw.png">
+            <a style="text-decoration: none;" href="https://github.com/zmetiva/Social-Media-Widget/archive/master.zip">
+                <button class="btn btn-success btn-block" style="margin-bottom: 3px;">Download - Widget</button>
+            </a>
+            <a style="text-decoration: none;" href="https://github.com/zmetiva/Social-Media-Widget-Manager/archive/master.zip">
+                <button class="btn btn-success btn-block">Download - Manager</button>
+            </a>
+            <br/>
+            <br/>
+        </div>
+        <div class="col-md-7">
+            <h1>Social Media Widget</h1>
+            <hr/>
+            <p>This web application is used to display on a page for an organization that has many social media pages. Below is an interactive example of the widget (
+                <strong>Facebook</strong> and
+                <strong>Twitter</strong> are the only types that have entries as of now):</p>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="col-md-12">
+                        <br/>
+                        <div style="float: left; width: 100%; height:402px; border: 2px solid lightgrey;">
+
+                            <div style="background-color: #EEE; float: left; width: 25%; height:400px; border-bottom: 2px solid lightgrey; border-right: 2px solid lightgrey; line-height: 45px; padding: 0; margin: 0;">
+
+                                <div id="fb" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; cursor: pointer;" onclick="selectSocialMediaItem('fb');">
+                                    <img src="imgs/fblogo.png" style="padding-right: 5px; vertical-align: middle; width: 25px;">
+                                    <span id="fbTxt" style="vertical-align: middle;color: #0066BB; font-weight: 700; font-size: 1em">Facebook</span>
+                                </div>
+
+                                <div id="twitter" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; cursor: pointer;" onclick="selectSocialMediaItem('twitter');">
+                                    <img src="imgs/twitterlogo.png" style="padding-right: 5px; vertical-align: middle; width: 25px;">
+                                    <span id="twitterTxt" style="vertical-align: middle; color: #0066BB; font-weight: 700;">Twitter</span>
+                                </div>
+
+                                <div id="youtube" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; cursor: pointer;" onclick="selectSocialMediaItem('youtube');">
+                                    <img src="imgs/youtubelogo.png" style="padding-right: 5px; vertical-align: middle; width: 25px;">
+                                    <span id="youtubeTxt" style="vertical-align: middle; color: #0066BB; font-weight: 700;">YouTube</span>
+                                </div>
+
+                                <div id="instagram" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; cursor: pointer;" onclick="selectSocialMediaItem('instagram');">
+                                    <img src="imgs/instagramlogo.png" style="padding-right: 5px; vertical-align: middle; width: 25px;">
+                                    <span id="instagramTxt" style="vertical-align: middle; color: #0066BB; font-weight: 700;">Instagram</span>
+                                </div>
+
+                            </div>
+                            <div id="mediaContainer" style="float: right; width: 75%; height:400px;">
+                                <div style="background-color: #EEE; width: 100%; height: 50px; float: left; border-bottom: 2px solid lightgrey; text-align: center; line-height: 45px;">
+                                    <b style="font-size: 10px; padding-right: 5px;">Select a Category: </b>
+                                    <select id="socialCategory" style="width: 65%;" onchange="selectCategory();">
+                                        <option id="cat0">-- Show All --</option>
+                                    </select>
+                                </div>
+                                <div id="mediaLinks" style="float: right; width: 100%; height: 348px; overflow-y: scroll;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <p>If you have happend to click on
+                <strong>Twitter</strong>, you have probably noticed that entries can have multiple categories. This helps by elimitating the confusion of designing the entries metadata.</p>
+            <p>Entries and categories can be created, editied and deleted with the <a href="#">Social Media Widget Manager</a>. These tools are still in beta, but they work fairly well. Only minor issues are present in the latest versions.</p>
+
+        </div>
+        <div class="col-md-3">
+            <br/>
+            <h4>Future Features</h4>
+            <ul>
+                <p><li>Design an option for feeds instead of page links.</li></p>
+                <p><li>Code is not commented or optimized as best as it could be.</li></p>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
