@@ -55,14 +55,17 @@
             <a style="text-decoration: none;" href="https://github.com/zmetiva/Social-Media-Widget/archive/master.zip">
                 <button class="btn btn-success btn-block" style="margin-bottom: 3px;">Download</button>
             </a>
+            <a style="text-decoration: none;" target="_blank" href="https://github.com/zmetiva/Social-Media-Widget">
+                <button class="btn btn-primary btn-block" style="margin-bottom: 3px;">GitHub Page</button>
+            </a>
             <br/>
             <br/>
         </div>
         <div class="col-md-7">
             <h1>Social Media Widget</h1>
             <hr/>
-            <p>This web application is used to display on a page for an organization that has many social media pages. Below is an interactive example of the widget (<strong>Facebook</strong> and
-                <strong>Twitter</strong> are the only types that have entries as of now):</p>
+            <p>This web application is used to display on a page for an organization that has many social media pages. The <strong>Bootstrap</strong> framework is <strong>REQUIRED</strong> for this widget to be viewed correctly. Below is an interactive example of the widget (<strong>Facebook</strong> and
+                <strong>Twitter</strong> are the only types that have entries in this example):</p>
             <div class="container-fluid">
                 <div class="row-fluid">
                     <div class="col-md-12">
@@ -111,7 +114,155 @@
             <p>If you have happend to click on
                 <strong>Twitter</strong>, you have probably noticed that entries can have multiple categories. This helps by elimitating the confusion of designing the entries metadata.</p>
             <p>Entries and categories can be created, editied and deleted with the <a href="#">Social Media Widget Manager</a>. These tools are still in beta, but they work fairly well. Only minor issues are present in the latest versions.</p>
+            <hr/>
+<h4><i class="glyphicon glyphicon-info-sign"></i> Additional Information</h4>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <i class="glyphicon glyphicon-chevron-right"></i> Installing the Widget
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                <p>Installing the widget is simple. Just copy the widget code (labeled in the comments or from the code below) and paste it where nessesary. If the widget is in a Bootstrap column that is too small, it may not look right. It is recomended that the widget is installed in its own row and column.</p>
+<pre style="text-wrap: wrap">
+<xmp><div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-md-12">
+            <br/>
+            <div style="float: left; width: 100%; height:402px; border: 2px solid lightgrey;">
 
+                <div style="background-color: #EEE; float: left; width: 25%; height:400px; border-bottom: 2px solid lightgrey; border-right: 2px solid lightgrey; line-height: 45px; padding: 0; margin: 0;">
+
+                    <div id="fb" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; cursor: pointer;" onclick="selectSocialMediaItem('fb');">
+                        <img src="imgs/fblogo.png" style="padding-right: 5px; vertical-align: middle; width: 25px;">
+                        <span id="fbTxt" style="vertical-align: middle;color: #0066BB; font-weight: 700; font-size: 1em">Facebook</span>
+                    </div>
+
+                    <div id="twitter" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; cursor: pointer;" onclick="selectSocialMediaItem('twitter');">
+                        <img src="imgs/twitterlogo.png" style="padding-right: 5px; vertical-align: middle; width: 25px;">
+                        <span id="twitterTxt" style="vertical-align: middle; color: #0066BB; font-weight: 700;">Twitter</span>
+                    </div>
+
+                    <div id="youtube" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; cursor: pointer;" onclick="selectSocialMediaItem('youtube');">
+                        <img src="imgs/youtubelogo.png" style="padding-right: 5px; vertical-align: middle; width: 25px;">
+                        <span id="youtubeTxt" style="vertical-align: middle; color: #0066BB; font-weight: 700;">YouTube</span>
+                    </div>
+
+                    <div id="instagram" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; cursor: pointer;" onclick="selectSocialMediaItem('instagram');">
+                        <img src="imgs/instagramlogo.png" style="padding-right: 5px; vertical-align: middle; width: 25px;">
+                        <span id="instagramTxt" style="vertical-align: middle; color: #0066BB; font-weight: 700;">Instagram</span>
+                    </div>
+
+                </div>
+                <div id="mediaContainer" style="float: right; width: 75%; height:400px;">
+                    <div style="background-color: #EEE; width: 100%; height: 50px; float: left; border-bottom: 2px solid lightgrey; text-align: center; line-height: 45px;">
+                        <b style="font-size: 10px; padding-right: 5px;">Select a Category: </b>
+                        <select id="socialCategory" style="width: 65%;" onchange="selectCategory();">
+                            <option id="cat0">-- Show All --</option>
+                        </select>
+                    </div>
+                    <div id="mediaLinks" style="float: right; width: 100%; height: 348px; overflow-y: scroll;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></xmp></pre>
+                                <p>The socialmediawidget.js file needs to alo be added in the head tag of your HTML file. Also, your media.txt file is required to be in the same directory as the web page on the server. These locations can be modified in the code if nessesary.</p>
+                    <pre><xmp><script src="js/socialmediawidget.js"></script></xmp></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="glyphicon glyphicon-chevron-right"></i> Specification of media.txt File
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p><strong>IMPORTANT : </strong> You will not be able to create a media.txt in Microsoft Notepad as it does not follow the UNIX/OSX EOL format! Notepad++ or other editors that have an option to change the EOL format to UNIX/OSX will work. Please use the <a href="#">Social Media Widget Manager</a> as it will automatically do this for you. None of the information below is nessesary to know if you use the manager.</p>
+                                <p>This file has a certain specification that needs to be followed for the widget to work. It can be manually modified, but it is <strong>strongly recomeneded</strong> to use the <a href="#">Social Media Widget Manager</a> to modify this file.</p>
+                                <p>The files sructure are as follows (following the insteractive widget on this page):</p>
+<pre><xmp>NEW
+CATEGORIES
+
+
+METADATA
+-- Show All --
+Music
+Official Pages
+Video Games
+-- More --
+NEW
+FACEBOOK
+Facebook Developers
+https://www.facebook.com/FacebookDevelopers
+METADATA
+Official Pages
+NEW
+FACEBOOK
+Facebook Page
+https://www.facebook.com/facebook
+METADATA
+Official Pages
+NEW
+FACEBOOK
+The Legend of Zelda
+#
+METADATA
+Video Games
+NEW
+TWITTER
+Metallica
+#
+METADATA
+Official Pages
+Music
+NEW
+TWITTER
+The Legend of Zelda
+#
+METADATA
+Video Games
+
+                                </xmp></pre>
+                                <strong><p>NEW</p></strong>
+                                <p>This starts every entry, including the categories. First, NEW MUST be added at the top of the file, followed by CATEGORIES along with two new lines.</p>
+                                <strong><p>CATEGORIES</p></strong>
+                                <p>This entry is only added ONCE in the top of the file. It specifies the names of each category that is used as metadata for each entry.</p>
+                                <strong><p>METADATA</p></strong>
+                                <p>Specifies the metadata associated with an entry. These are the Categories that are populated at the top of the file. When using in the CATEGORIES section, the categories follow the METADATA tag.</p>
+                                <strong><p>Social Media Tags</strong></p>
+                                <p>These specify a new entry in the widget. THEY MUST BE IN ALL CAPS AND FOLLOW THE NEW TAG!</p>
+                                <p>After an entry has been created, the title is then entered followed by a new line. The link is then entered, followed by a new line. The METADATA tag is then entered and any multiples of categories can be entered, all followed by new lines. An example below shows a sample entry:</p>
+<pre><xmp>NEW
+FACEBOOK
+Facebook Developers
+https://www.facebook.com/FacebookDevelopers
+METADATA
+Official Pages</xmp></pre>
+                                <p>Another example with a Twitter page with multiple categories:</p>
+<pre><xmp>NEW
+TWITTER
+Metallica
+#
+METADATA
+Official Pages
+Music</xmp></pre>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/><br/><br/>
         </div>
         <div class="col-md-3">
             <br/>
@@ -129,6 +280,7 @@
             </ul>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </body>
 
 </html>
