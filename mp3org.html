@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+<head>
+    <title>zmmetiva</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/socialmediawidget.js"></script>
+
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">zmetiva</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/zmetiva" target="_blank">GitHub Page</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    <div class="container-fluid" style="padding-top: 60px; padding-bottom: 10px; border-bottom: 2px solid black; background-repeat: repeat;  background-image: url('bg.png');">
+        <div class="pull-left">
+            <img class="img-rounded" style="height: 100px;" src="https://avatars1.githubusercontent.com/u/8875857?v=3&s=460">
+        </div>
+        <div style="padding-left: 120px;">
+            <h2>zmetiva</h2>
+            <p>
+                <strong>GitHub Website</strong>
+            </p>
+        </div>
+    </div>
+    <div class="row-fluid" style="padding-top: 10px;">
+        <div class="col-md-2 text-center">
+            <img class="img-rounded" style="width: 100%; padding-bottom: 3px;" src="imgs/mp3org.png">
+            <a style="text-decoration: none;" href="javascript:void();">
+                <button class="btn btn-success btn-block disabled" style="margin-bottom: 3px;">Download</button>
+            </a>
+            <!-- TODO: target="_blank" -->
+            <a style="text-decoration: none;" href="javascript:void();">
+                <button class="btn btn-primary btn-block disabled" style="margin-bottom: 3px;">GitHub Page</button>
+            </a>
+            <br/>
+            <br/>
+        </div>
+        <div class="col-md-7">
+            <h1>MP3 Organizer +</h1>
+            <hr/>
+            <p>Do you have a folder full of MP3 files on your computer that you would like to be organized, but you dont have the time? This application is for you!</p>
+            <p>The MP3 Organizer + application organizes every single MP3 file in a directory, assuming that these files are tagged. It first creates a folder for the artist, then the album, then places the MP3 file in the respective directory.</p>
+            <p>This application is not ready yet, but will soon be released. I have decided to add some extra features that will take some time to implement.</p>
+            <p><strong>NOTE:</strong> <i>I apologize for this image. It is not the final image for this application. I am currently working on getting a better icon for this application.</i></p>
+            <!-- <h4><i class="glyphicon glyphicon-info-sign"></i> Additional Information</h4>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <i class="glyphicon glyphicon-chevron-right"></i> How to Use the Manager
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            The
+                            <strong>Menu</strong> dropdown has everything you need in order to create your entries. It is located in the upper right corner of the navigation toolbar.
+                            <ul>
+                                <li>
+                                    <h4>Add an Entry</h4>To add an entry, select this option. You must select the social media type, along with the title to be displayed, the URL to the page and the Metadata (which are custom categories for the widget). You
+                                    can create metadata by selecting the "Manage Categories" option in the menu. More than one piece of metadata can be assigned to the entry.</li>
+                                <li>
+                                    <h4>Manage Categories</h4>To add metadata/categories to the entries, you can create a category. This allows you to type in a category name and add it to the category list. You can also edit other categories by selecting
+                                    this option.</li>
+                                <li>
+                                    <h4>Anchors</h4>These allow easy access to the different types of social media that are in the manager if the list gets too large. They link to the respective social media type.</li>
+                                <li>
+                                    <h4>Show Widget</h4>Shows a preview of the widget and how it will look. A way to see changes as soon as they have been made is in the works, but for now, you must export the file and save it in the same directory as manager.html</li>
+                                <li>
+                                    <h4>Export to File...</h4>This will export all changes that have been made the media.txt file. A download prompt will allow you to save the file. This file should then replace the media.txt on your site and also the media.txt
+                                    in your manager.html directory.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <i class="glyphicon glyphicon-chevron-right"></i> Uploading
+                                <code>media.txt</code> to Your Server
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            This file is the core of the data that is used in the widget and needs to replace the old media.txt file in order to make changes to the widget.
+                            <br/>
+                            <br/> Simply uploading this file and replacing it on your web server will make all of the changes to the widget. No further modifcations are needed.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <i class="glyphicon glyphicon-chevron-right"></i> Items In Progress and Things to Consider
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            Currently, the manager and widget work great from my experience. However, there is some code that needs to be updated to make the application more user friendly and easier to use. The following list displays items that I would like to implement in the
+                            future (ordered from most important to least important):<br/><br/>
+                            <ul>
+                                <li>Displaying a warning message to the user that warns them to export to file when attempting to refresh the page (you will lose data recently entered into the manager if you attempt to refresh the page).
+                                    <br/>
+                                    <br/>
+                                </li>
+                                <li>Downloading the media.txt file from the server instead of a local directory for easier access and less dependacies.<i>This would also allow other browsers to use the widget.</i>
+                                    <br/>
+                                    <br/>
+                                </li>
+                                <li>Allowing the
+                                    <strong>Show Widget</strong> menu option to display real-time updates.
+                                    <br/>
+                                    <br/>
+                                </li>
+                                <li>Optimization
+                                    <br/>
+                                    <br/>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <br/> -->
+        </div>
+        <div class="col-md-3">
+            <br/>
+            <h4>Future Features</h4>
+            <ul>
+                <p>
+                    <li>Uploading this project to GitHub</li>
+                </p>
+                <p>
+                    <li>Getting a better icon/picture for this application</li>
+                </p>
+            </ul>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</body>
+
+</html>
