@@ -66,50 +66,43 @@
             <hr/>
             <p>This web application is used to display on a page for an organization that has many social media pages. The <strong>Bootstrap</strong> framework is <strong>REQUIRED</strong> for this widget to be viewed correctly. Below is an interactive example of the widget (<strong>Facebook</strong> and
                 <strong>Twitter</strong> are the only types that have entries in this example):</p>
-            <div class="container-fluid">
-                <div class="row-fluid">
-                    <div class="col-md-12">
-                        <br/>
-                        <div style="float: left; width: 100%; height:402px; border: 2px solid lightgrey;">
-
-                            <div style="background-color: #EEE; float: left; width: 25%; height:400px; border-bottom: 2px solid lightgrey; border-right: 2px solid lightgrey; line-height: 45px; padding: 0; margin: 0;">
-
-                                <div id="fb" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; cursor: pointer;" onclick="selectSocialMediaItem('fb');">
-                                    <img src="imgs/fblogo.png" style="padding-right: 5px; vertical-align: middle; width: 25px;">
-                                    <span id="fbTxt" style="vertical-align: middle;color: #0066BB; font-weight: 700; font-size: 1em">Facebook</span>
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <div class="col-md-12">
+                            <div style="float: left; width: 100%; height: 402px; border: 2px solid lightgrey; border-radius: 5px;">
+                                <div class="col-md-3 col-sm-3 col-xs-3 media-container" style="background-color: #eee; float: left; width: 25%; height: 400px; border-bottom: 2px solid lightgrey; border-right: 2px solid lightgrey; line-height: 45px; padding: 0; margin: 0;">
+                                    <div class="fbBox" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; border-radius: 3px; cursor: pointer;" onclick="selectSocialMediaItem('fb');" id="fb">
+                                        <img style="padding-right: 5px; vertical-align: middle; width: 25px;" alt="" src="imgs/fblogo.png">&nbsp;
+                                        <span class="hidden-xs" style="vertical-align: middle; color: #0066bb; font-weight: bold; font-size: 1em;" id="fbTxt">Facebook</span>
+                                    </div>
+                                    <div style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; border-radius: 3px; cursor: pointer;" onclick="selectSocialMediaItem('twitter');" id="twitter">
+                                        <img style="padding-right: 5px; vertical-align: middle; width: 25px;" alt="" src="imgs/twitterlogo.png">
+                                        <span class="hidden-xs" style="vertical-align: middle; color: #0066bb; font-weight: bold;" id="twitterTxt">Twitter</span>
+                                    </div>
+                                    <div style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; border-radius: 3px; cursor: pointer;" onclick="selectSocialMediaItem('youtube');" id="youtube">
+                                        <img style="padding-right: 5px; vertical-align: middle; width: 25px;" alt="" src="imgs/youtubelogo.png">&nbsp;
+                                        <span class="hidden-xs" style="vertical-align: middle; color: #0066bb; font-weight: bold;" id="youtubeTxt">YouTube</span>
+                                    </div>
+                                    <div style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; border-radius: 3px; cursor: pointer;" onclick="selectSocialMediaItem('instagram');" id="instagram">
+                                        <img style="padding-right: 5px; vertical-align: middle; width: 25px;" alt="" src="imgs/instagramlogo.png">&nbsp;
+                                        <span class="hidden-xs" style="vertical-align: middle; color: #0066bb; font-weight: bold;" id="instagramTxt">Instagram</span>
+                                    </div>
                                 </div>
 
-                                <div id="twitter" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; cursor: pointer;" onclick="selectSocialMediaItem('twitter');">
-                                    <img src="imgs/twitterlogo.png" style="padding-right: 5px; vertical-align: middle; width: 25px;">
-                                    <span id="twitterTxt" style="vertical-align: middle; color: #0066BB; font-weight: 700;">Twitter</span>
-                                </div>
-
-                                <div id="youtube" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; cursor: pointer;" onclick="selectSocialMediaItem('youtube');">
-                                    <img src="imgs/youtubelogo.png" style="padding-right: 5px; vertical-align: middle; width: 25px;">
-                                    <span id="youtubeTxt" style="vertical-align: middle; color: #0066BB; font-weight: 700;">YouTube</span>
-                                </div>
-
-                                <div id="instagram" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; cursor: pointer;" onclick="selectSocialMediaItem('instagram');">
-                                    <img src="imgs/instagramlogo.png" style="padding-right: 5px; vertical-align: middle; width: 25px;">
-                                    <span id="instagramTxt" style="vertical-align: middle; color: #0066BB; font-weight: 700;">Instagram</span>
-                                </div>
-
-                            </div>
-                            <div id="mediaContainer" style="float: right; width: 75%; height:400px;">
-                                <div style="background-color: #EEE; width: 100%; height: 50px; float: left; border-bottom: 2px solid lightgrey; text-align: center; line-height: 45px;">
-                                    <b style="font-size: 10px; padding-right: 5px;">Select a Category: </b>
-                                    <select id="socialCategory" style="width: 65%;" onchange="selectCategory();">
-                                        <option id="cat0">-- Show All --</option>
-                                    </select>
-                                </div>
-                                <div id="mediaLinks" style="float: right; width: 100%; height: 348px; overflow-y: scroll;">
-
+                                <div class="col-md-9 col-sm-9 col-xs-9" style="height: 400px; padding: 0 0 0 0;" id="mediaContainer">
+                                    <div style="background-color: #eee; width: 100%; height: 50px; float: left; border-bottom: 2px solid lightgrey; text-align: center; line-height: 45px;">
+                                        <strong class="hidden-xs" style="font-size: 10px; padding-right: 5px;">Select a Category: </strong>
+                                        <strong class="hidden-md" style="font-size: 10px; padding-right: 5px;"> </strong>
+                                        <select style="width: 65%;" onchange="selectCategory();" id="socialCategory">
+                                            <option id="cat0">-- Show All --</option>
+                                        </select>
+                                    </div>
+                                    <div style="float: right; width: 100%; height: 348px; overflow-y: scroll;" id="mediaLinks">&nbsp;</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
             <br/>
             <p>If you have happend to click on
                 <strong>Twitter</strong>, you have probably noticed that entries can have multiple categories. This helps by elimitating the confusion of designing the entries metadata.</p>
@@ -132,42 +125,35 @@
 <xmp><div class="container-fluid">
     <div class="row-fluid">
         <div class="col-md-12">
-            <br/>
-            <div style="float: left; width: 100%; height:402px; border: 2px solid lightgrey;">
-
-                <div style="background-color: #EEE; float: left; width: 25%; height:400px; border-bottom: 2px solid lightgrey; border-right: 2px solid lightgrey; line-height: 45px; padding: 0; margin: 0;">
-
-                    <div id="fb" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; cursor: pointer;" onclick="selectSocialMediaItem('fb');">
-                        <img src="imgs/fblogo.png" style="padding-right: 5px; vertical-align: middle; width: 25px;">
-                        <span id="fbTxt" style="vertical-align: middle;color: #0066BB; font-weight: 700; font-size: 1em">Facebook</span>
+            <div style="float: left; width: 100%; height: 402px; border: 2px solid lightgrey; border-radius: 5px;">
+                <div class="col-md-3 col-sm-3 col-xs-3 media-container" style="background-color: #eee; float: left; width: 25%; height: 400px; border-bottom: 2px solid lightgrey; border-right: 2px solid lightgrey; line-height: 45px; padding: 0; margin: 0;">
+                    <div class="fbBox" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; border-radius: 3px; cursor: pointer;" onclick="selectSocialMediaItem('fb');" id="fb">
+                        <img style="padding-right: 5px; vertical-align: middle; width: 25px;" alt="" src="imgs/fblogo.png">&nbsp;
+                        <span class="hidden-xs" style="vertical-align: middle; color: #0066bb; font-weight: bold; font-size: 1em;" id="fbTxt">Facebook</span>
                     </div>
-
-                    <div id="twitter" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; cursor: pointer;" onclick="selectSocialMediaItem('twitter');">
-                        <img src="imgs/twitterlogo.png" style="padding-right: 5px; vertical-align: middle; width: 25px;">
-                        <span id="twitterTxt" style="vertical-align: middle; color: #0066BB; font-weight: 700;">Twitter</span>
+                    <div style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; border-radius: 3px; cursor: pointer;" onclick="selectSocialMediaItem('twitter');" id="twitter">
+                        <img style="padding-right: 5px; vertical-align: middle; width: 25px;" alt="" src="imgs/twitterlogo.png">
+                        <span class="hidden-xs" style="vertical-align: middle; color: #0066bb; font-weight: bold;" id="twitterTxt">Twitter</span>
                     </div>
-
-                    <div id="youtube" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; cursor: pointer;" onclick="selectSocialMediaItem('youtube');">
-                        <img src="imgs/youtubelogo.png" style="padding-right: 5px; vertical-align: middle; width: 25px;">
-                        <span id="youtubeTxt" style="vertical-align: middle; color: #0066BB; font-weight: 700;">YouTube</span>
+                    <div style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; border-radius: 3px; cursor: pointer;" onclick="selectSocialMediaItem('youtube');" id="youtube">
+                        <img style="padding-right: 5px; vertical-align: middle; width: 25px;" alt="" src="imgs/youtubelogo.png">&nbsp;
+                        <span class="hidden-xs" style="vertical-align: middle; color: #0066bb; font-weight: bold;" id="youtubeTxt">YouTube</span>
                     </div>
-
-                    <div id="instagram" style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; cursor: pointer;" onclick="selectSocialMediaItem('instagram');">
-                        <img src="imgs/instagramlogo.png" style="padding-right: 5px; vertical-align: middle; width: 25px;">
-                        <span id="instagramTxt" style="vertical-align: middle; color: #0066BB; font-weight: 700;">Instagram</span>
+                    <div style="vertical-align: middle; width: 100%; height: 50px; padding-left: 15px; border-radius: 3px; cursor: pointer;" onclick="selectSocialMediaItem('instagram');" id="instagram">
+                        <img style="padding-right: 5px; vertical-align: middle; width: 25px;" alt="" src="imgs/instagramlogo.png">&nbsp;
+                        <span class="hidden-xs" style="vertical-align: middle; color: #0066bb; font-weight: bold;" id="instagramTxt">Instagram</span>
                     </div>
-
                 </div>
-                <div id="mediaContainer" style="float: right; width: 75%; height:400px;">
-                    <div style="background-color: #EEE; width: 100%; height: 50px; float: left; border-bottom: 2px solid lightgrey; text-align: center; line-height: 45px;">
-                        <b style="font-size: 10px; padding-right: 5px;">Select a Category: </b>
-                        <select id="socialCategory" style="width: 65%;" onchange="selectCategory();">
+
+                <div class="col-md-9 col-sm-9 col-xs-9" style="height: 400px; padding: 0 0 0 0;" id="mediaContainer">
+                    <div style="background-color: #eee; width: 100%; height: 50px; float: left; border-bottom: 2px solid lightgrey; text-align: center; line-height: 45px;">
+                        <strong class="hidden-xs" style="font-size: 10px; padding-right: 5px;">Select a Category: </strong>
+                        <strong class="hidden-md" style="font-size: 10px; padding-right: 5px;"> </strong>
+                        <select style="width: 65%;" onchange="selectCategory();" id="socialCategory">
                             <option id="cat0">-- Show All --</option>
                         </select>
                     </div>
-                    <div id="mediaLinks" style="float: right; width: 100%; height: 348px; overflow-y: scroll;">
-
-                    </div>
+                    <div style="float: right; width: 100%; height: 348px; overflow-y: scroll;" id="mediaLinks">&nbsp;</div>
                 </div>
             </div>
         </div>
