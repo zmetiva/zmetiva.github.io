@@ -52,12 +52,11 @@
     <div class="row-fluid" style="padding-top: 10px;">
         <div class="col-md-2 text-center">
             <img class="img-rounded" style="width: 100%; padding-bottom: 3px;" src="imgs/mp3org.png">
-            <a style="text-decoration: none;" href="javascript:void();">
-                <button class="btn btn-success btn-block disabled" style="margin-bottom: 3px;">Download</button>
+            <a style="text-decoration: none;" href="https://github.com/zmetiva/MP3-Organizer/releases/download/v0.8/MP3.Organizer.zip">
+                <button class="btn btn-success btn-block" style="margin-bottom: 3px;">Download</button>
             </a>
-            <!-- TODO: target="_blank" -->
-            <a style="text-decoration: none;" href="javascript:void();">
-                <button class="btn btn-primary btn-block disabled" style="margin-bottom: 3px;">GitHub Page</button>
+            <a style="text-decoration: none;" target="_blank" href="https://github.com/zmetiva/MP3-Organizer">
+                <button class="btn btn-primary btn-block" style="margin-bottom: 3px;">GitHub Page</button>
             </a>
             <br/>
             <br/>
@@ -65,42 +64,41 @@
         <div class="col-md-7">
             <h1>MP3 Organizer +</h1>
             <hr/>
+            <h6 style="font-weight: bold">PRE-RELEASE (use with caution)</h6>
             <p>Do you have a folder full of MP3 files on your computer that you would like to be organized, but you dont have the time? This application is for you!</p>
             <p>The MP3 Organizer + application organizes every single MP3 file in a directory, assuming that these files are tagged. It first creates a folder for the artist, then the album, then places the MP3 file in the respective directory.</p>
-            <p>This application is not ready yet, but will soon be released. I have decided to add some extra features that will take some time to implement.</p>
+            <p>This application has gone through a lot of testing and works well. However, please use it with caution and report any bugs.</p>
             <p><strong>NOTE:</strong> <i>I apologize for this image. It is not the final image for this application. I am currently working on getting a better icon for this application.</i></p>
-            <!-- <h4><i class="glyphicon glyphicon-info-sign"></i> Additional Information</h4>
+            <hr/>
+            <h4><i class="glyphicon glyphicon-info-sign"></i> Additional Information</h4>
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">
                             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                <i class="glyphicon glyphicon-chevron-right"></i> How to Use the Manager
+                                <i class="glyphicon glyphicon-chevron-right"></i> Custom Rename Options
                             </a>
                         </h4>
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                         <div class="panel-body">
-                            The
-                            <strong>Menu</strong> dropdown has everything you need in order to create your entries. It is located in the upper right corner of the navigation toolbar.
-                            <ul>
-                                <li>
-                                    <h4>Add an Entry</h4>To add an entry, select this option. You must select the social media type, along with the title to be displayed, the URL to the page and the Metadata (which are custom categories for the widget). You
-                                    can create metadata by selecting the "Manage Categories" option in the menu. More than one piece of metadata can be assigned to the entry.</li>
-                                <li>
-                                    <h4>Manage Categories</h4>To add metadata/categories to the entries, you can create a category. This allows you to type in a category name and add it to the category list. You can also edit other categories by selecting
-                                    this option.</li>
-                                <li>
-                                    <h4>Anchors</h4>These allow easy access to the different types of social media that are in the manager if the list gets too large. They link to the respective social media type.</li>
-                                <li>
-                                    <h4>Show Widget</h4>Shows a preview of the widget and how it will look. A way to see changes as soon as they have been made is in the works, but for now, you must export the file and save it in the same directory as manager.html</li>
-                                <li>
-                                    <h4>Export to File...</h4>This will export all changes that have been made the media.txt file. A download prompt will allow you to save the file. This file should then replace the media.txt on your site and also the media.txt
-                                    in your manager.html directory.</li>
-                            </ul>
+                            <p>This application not only will sort your MP3 files, but it will also allow you to rename the files in a consistant manner. By going to <strong>Edit->Preferences</strong>, you can set the option of a renaming structure.</p>
+                            <p><strong>THE FILES MUST BE TAGGED</strong>. All of the information that is used for the rename must be tagged in the file.</p>
+                            <p>An example of a rename:<br/>
+                                <pre>01 - First Song Title.mp3</pre>
+                                You would type:<br/>
+                                <pre>track - title</pre>
+                                into the <strong>Rename Structure</strong> option.</p>
+
+                            <p>The available options for the rename structure are:</p>
+                            <pre>track
+artist
+album
+year
+title</pre>
                         </div>
                     </div>
-                </div>
+                </div> <!--
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingTwo">
                         <h4 class="panel-title">
@@ -151,21 +149,27 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <br/>
             <br/>
-            <br/> -->
+            <br/>
         </div>
         <div class="col-md-3">
             <br/>
             <h4>Future Features</h4>
             <ul>
                 <p>
-                    <li>Uploading this project to GitHub</li>
+                    <li><span style="font-weight: bold; color: green">FIXED: </span><span style="text-decoration: line-through">Uploading this project to GitHub</span></li>
                 </p>
                 <p>
-                    <li>Getting a better icon/picture for this application</li>
+                    <li>Allowing the font setting to work.</li>
+                </p>
+                <p>
+                    <li>Allowing many different audio files that can contain tag information to be organized.</li>
+                </p>
+                <p>
+                    <li>Getting a better icon/picture for this application.</li>
                 </p>
             </ul>
         </div>
